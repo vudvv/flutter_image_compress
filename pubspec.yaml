@@ -14,7 +14,7 @@ dependencies:
   flutter_image_compress_common:
     git:
       url: https://github.com/vudvv/flutter_image_compress_common
-      ref: 1.0.6
+      ref: 1.0.7
   flutter_image_compress_web: ^0.1.5
   flutter_image_compress_macos: ^1.0.3
   flutter_image_compress_ohos: ^0.0.3

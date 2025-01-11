@@ -34,8 +34,8 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: "1.0.6"
-      resolved-ref: "8033a4a83c663deeae7be86fc2386b5ab8015cb6"
+      ref: "1.0.7"
+      resolved-ref: "8fb6adbca7afe47d8f545ed3017c9c18d95bee8d"
       url: "https://github.com/vudvv/flutter_image_compress_common"
     source: git
     version: "1.0.5"
