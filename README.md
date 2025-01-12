@@ -7,11 +7,10 @@
 [![Awesome Flutter](https://img.shields.io/badge/Awesome-Flutter-blue.svg?longCache=true&style=flat-square)](https://stackoverflow.com/questions/tagged/flutter?sort=votes)
 [![FlutterCandies](https://pub.idqqimg.com/wpa/images/group.png)](https://jq.qq.com/?_wv=1027&k=5bcc0gy)
 
-Compresses image as native plugin (Obj-C/Kotlin). This library works on Android, iOS, macOS, Web, OpenHarmony.
+Compresses image as native plugin (Obj-C/Kotlin). This library works on Android and iOS.
 
 - [flutter\_image\_compress](#flutter_image_compress)
   - [Why don't you use dart to do it](#why-dont-you-use-dart-to-do-it)
-  - [Platform Features](#platform-features)
   - [Usage](#usage)
   - [About common params](#about-common-params)
     - [minWidth and minHeight](#minwidth-and-minheight)
@@ -33,8 +32,7 @@ Compresses image as native plugin (Obj-C/Kotlin). This library works on Android,
     - [Compressing returns `null`](#compressing-returns-null)
   - [About EXIF information](#about-exif-information)
   - [Web](#web)
-  - [About macOS](#about-macos)
-  - [OpenHarmony](#openharmony)
+  - [Platform Features](#platform-features)
 
 ## Why don't you use dart to do it
 
@@ -42,25 +40,6 @@ Q：Dart already has image compression libraries. Why use native?
 
 A：For unknown reasons, image compression in Dart language is not efficient,
 even in release version. Using isolate does not solve the problem.
-
-## Platform Features
-
-| Feature                    | Android |  iOS  |           Web           | macOS | OpenHarmony |
-| :------------------------- | :-----: | :---: | :---------------------: | :---: | :-------: |
-| method: compressWithList   |    ✅    |   ✅   |            ✅            |   ✅   |     ✅     |
-| method: compressAssetImage |    ✅    |   ✅   |            ✅            |   ✅   |     ✅     |
-| method: compressWithFile   |    ✅    |   ✅   |            ❌            |   ✅   |     ✅     |
-| method: compressAndGetFile |    ✅    |   ✅   |            ❌            |   ✅   |     ✅     |
-| format: jpeg               |    ✅    |   ✅   |            ✅            |   ✅   |     ✅     |
-| format: png                |    ✅    |   ✅   |            ✅            |   ✅   |     ✅     |
-| format: webp               |    ✅    |   ✅   | [🌐][webp-compatibility] |   ❌   |     ✅     |
-| format: heic               |    ✅    |   ✅   |            ❌            |   ✅   |     ✅     |
-| param: quality             |    ✅    |   ✅   | [🌐][webp-compatibility] |   ✅   |     ✅     |
-| param: rotate              |    ✅    |   ✅   |            ❌            |   ✅   |     ✅     |
-| param: keepExif            |    ✅    |   ✅   |            ❌            |   ✅   |     ❌     |
-
-[webp-compatibility]: https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob#browser_compatibility "Browser support"
-
 
 ## Usage
 
@@ -85,7 +64,7 @@ import 'package:flutter_image_compress/flutter_image_compress.dart';
 
 Use as:
 
-[See full example](https://github.com/fluttercandies/flutter_image_compress/blob/main/packages/flutter_image_compress/example/lib/main.dart)
+[See full example](https://github.com/fluttercandies/flutter_image_compress/blob/main/example/lib/main.dart)
 
 There are several ways to use the library api.
 
@@ -379,20 +358,20 @@ About web compatibility: two methods with file will throw an exception when used
 
 [pica]: https://www.npmjs.com/package/pica?activeTab=readme
 
-## About macOS
+## Platform Features
 
-You need change the minimum deployment target to 10.15.
+| Feature                    | Android |  iOS  |           Web           |
+| :------------------------- | :-----: | :---: | :---------------------: |
+| method: compressWithList   |    ✅    |   ✅   |            ✅            |
+| method: compressAssetImage |    ✅    |   ✅   |            ✅            |
+| method: compressWithFile   |    ✅    |   ✅   |            ❌            |
+| method: compressAndGetFile |    ✅    |   ✅   |            ❌            |
+| format: jpeg               |    ✅    |   ✅   |            ✅            |
+| format: png                |    ✅    |   ✅   |            ✅            |
+| format: webp               |    ✅    |   ✅   | [🌐][webp-compatibility] |
+| format: heic               |    ✅    |   ✅   |            ❌            |
+| param: quality             |    ✅    |   ✅   | [🌐][webp-compatibility] |
+| param: rotate              |    ✅    |   ✅   |            ❌            |
+| param: keepExif            |    ✅    |   ✅   |            ❌            |
 
-Open xcode project, select Runner target, and change the value of `macOS Deployment Target` to `10.15`.
-
-And, change the `Podfile`:
-Change `platform` to `platform :osx, '10.15'`.
-
-
-## OpenHarmony
-
-The currently supported image formats for parsing include JPEG, PNG, GIF, RAW, WebP, BMP, and SVG. However, the encoding output image formats are currently limited to JPEG, PNG, and WebP only.
-
-当前支持的解析图片格式包括 JPEG、PNG、GIF、RAW、WebP、BMP、SVG . 编码输出图片格式当前仅支持 JPEG、PNG 和 WebP.
-
-
+[webp-compatibility]: https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob#browser_compatibility "Browser support"

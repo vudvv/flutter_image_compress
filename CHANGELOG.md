@@ -1,26 +1,4 @@
-## 2.4.0
-
- - **FEAT**: remove pica from web ([#324](https://github.com/fluttercandies/flutter_image_compress/issues/324)). ([b56ce0fa](https://github.com/fluttercandies/flutter_image_compress/commit/b56ce0fa4763bf8084c26ea8e435e37e06997ba8))
-
-## 2.3.0
-
- - **FEAT**: Update plugin structure for OpenHarmony ([#301](https://github.com/fluttercandies/flutter_image_compress/issues/301)). ([5e999c43](https://github.com/fluttercandies/flutter_image_compress/commit/5e999c431c5dcff880b8c217e40fa7d027ca0bdc))
-
-## 2.2.0
-
- - **FEAT**: support openharmony ([#290](https://github.com/fluttercandies/flutter_image_compress/issues/290)). ([e9f10b28](https://github.com/fluttercandies/flutter_image_compress/commit/e9f10b28e089539fe7319d7bc1779b9a2c209fc4))
- - **DOCS**: The first version for OpenHarmony. ([5fcab8da](https://github.com/fluttercandies/flutter_image_compress/commit/5fcab8dac6277b36b7169962474e5af3cf88724b))
-
-## 2.1.0
-
- - **FEAT**: support macOS ([#264](https://github.com/fluttercandies/flutter_image_compress/issues/264)). ([06ab91ed](https://github.com/fluttercandies/flutter_image_compress/commit/06ab91ed470ea2c838daeb6c654ad06dadc99f1d))
- - **DOCS**: Update README ([#266](https://github.com/fluttercandies/flutter_image_compress/issues/266)). ([235643ab](https://github.com/fluttercandies/flutter_image_compress/commit/235643ab0be9c9a39083031d9ab9de06a74241f3))
- - **DOCS**: Update README. ([1e232a10](https://github.com/fluttercandies/flutter_image_compress/commit/1e232a10c84743ab3c35e1bffda5730801506891))
- - **DOCS**: Update changelog. ([c847f5d5](https://github.com/fluttercandies/flutter_image_compress/commit/c847f5d5d03d4e727b1a83dd33e54d8d93787749))
-
-## 2.0.4
-
- - **DOCS**: Update changelog. ([c847f5d5](https://github.com/fluttercandies/flutter_image_compress/commit/c847f5d5d03d4e727b1a83dd33e54d8d93787749))
+# CHANGELOG
 
 ## 2.0.3
 
